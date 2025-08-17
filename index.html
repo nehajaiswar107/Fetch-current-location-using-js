@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Location & Weather</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Background */
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: #333;
+    }
+
+    /* Container */
+    .container {
+      text-align: center;
+      max-width: 500px;
+      padding: 20px;
+    }
+
+    /* Title */
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: white;
+    }
+
+    /* Button */
+    #get-location-button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #get-location-button:hover {
+      background: #e68900;
+      transform: scale(1.05);
+    }
+
+    /* Output Card */
+    #output {
+      margin-top: 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    #output h3 {
+      margin-bottom: 10px;
+      color: #0077b6;
+    }
+
+    #output p {
+      margin: 6px 0;
+      font-size: 16px;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌍 Get Your Location & Weather</h1>
+    <button id="get-location-button">Get Location</button>
+
+    <!-- Your JS will automatically replace content inside this div -->
+    <div id="output">
+      <p>Click the button to fetch your location and weather.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
